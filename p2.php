@@ -8,7 +8,7 @@
 	<body>
 		<h1> Pole trójkąta </h1>
 			
-		<form action="p2.html" method="POST">
+		<form action="p2.php" method="POST">
 		
 			<label for="a">Podaj a:</label> <input type="number" name="a"></br>
 			
@@ -25,13 +25,30 @@
 		
 			<?php
 				
-				$a=$_POST["a"];
-				$b=$_POST["b"];
-				$c=$_POST["c"];
-				if (($a+$b<=$c) AND ($c+$b<=$a) AND ($a+$c<=$b))
+				if(isset($_POST["a"]) AND isset($_POST["b"]) AND isset($_POST["c"]))
 				{
-					echo "Nie da się stworzyć z danych boków trójkata";
+				
+					$a=$_POST["a"];
+					$b=$_POST["b"];
+					$c=$_POST["c"];
+				
+				
+					if (($a+$b<=$c) OR ($c+$b<=$a) OR ($a+$c<=$b))
+						{
+							echo "Nie da się stworzyć z danych boków trójkata";
+						}
+					else
+						{
+						echo $a;
+						echo $b;
+						echo $c;	
+					}
 				}
+				else
+				{
+					echo "Pola są puste";
+				}
+				
 			
 			?>
 		
