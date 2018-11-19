@@ -5,12 +5,12 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-			
-			<label for="a">Podaj Pierwsze słowo:</label><input type="text" id="a"></br>
-			<label for="b">Podaj Drugie słowo:</label><input type="text" id="b"></br>
+		<form action="p2.html" method="POST"> 
+			<label for="a">Podaj Pierwsze słowo:</label><input type="text" name="a"></br>
+			<label for="b">Podaj Drugie słowo:</label><input type="text" name="b"></br>
 			<input type="submit" value="Przekształć"></br>
 			</br>
-			
+		</form>
 			<div id="wyn" style="margin-top: 20px;">	
 					<?php
 
